@@ -1,5 +1,6 @@
 import sys
 
+from interval_partitioning import alocar_salas
 from leitor_csv import ErroValidacaoCSV, ler_atividades_csv
 from pico_simultaneidade import calcular_pico_simultaneidade
 
@@ -22,10 +23,16 @@ def main() -> int:
         print(f"Não foi possível abrir o arquivo: {erro}")
         return 1
 
-    for atividade in atividades:
-        inicio = atividade.inicio.strftime("%H:%M")
-        fim = atividade.fim.strftime("%H:%M")
-        print(f"{atividade.id} - {atividade.nome}: {inicio} - {fim}")
+    salas = alocar_salas(atividades)
+    print(f"Quantidade minima de salas: {len(salas)}")
+
+    for sala in salas:
+        print(f"\nSala {sala.id}:")
+        for atividade in sala.atividades:
+            inicio = atividade.inicio.strftime("%H:%M")
+            fim = atividade.fim.strftime("%H:%M")
+            print(f"  {atividade.id} - {atividade.nome}: {inicio} - {fim}")
+    print()
 
     pico = calcular_pico_simultaneidade(atividades)
     print(f"Pico de atividades simultaneas: {pico}")
