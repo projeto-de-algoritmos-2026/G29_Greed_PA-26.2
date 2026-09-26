@@ -2,6 +2,7 @@ import sys
 
 from interval_partitioning import alocar_salas
 from leitor_csv import ErroValidacaoCSV, ler_atividades_csv
+from linha_do_tempo import gerar_linha_do_tempo
 from pico_simultaneidade import calcular_pico_simultaneidade
 
 def main() -> int:
@@ -32,6 +33,8 @@ def main() -> int:
             inicio = atividade.inicio.strftime("%H:%M")
             fim = atividade.fim.strftime("%H:%M")
             print(f"  {atividade.id} - {atividade.nome}: {inicio} - {fim}")
+    print("\nLinha do tempo:")
+    print(gerar_linha_do_tempo(salas))
     print()
 
     pico = calcular_pico_simultaneidade(atividades)
