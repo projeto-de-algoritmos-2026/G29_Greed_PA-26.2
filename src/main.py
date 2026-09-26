@@ -37,6 +37,12 @@ def main() -> int:
     pico = calcular_pico_simultaneidade(atividades)
     print(f"Pico de atividades simultaneas: {pico}")
 
+    # o pico e o minimo de salas que qualquer solucao precisa
+    if len(salas) == pico:
+        print("Salas = pico, a alocacao e otima.")
+    else:
+        print(f"Atencao: {len(salas)} salas para um pico de {pico}.")
+
     return 0
 
 if __name__ == "__main__":
