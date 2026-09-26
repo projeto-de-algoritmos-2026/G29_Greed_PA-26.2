@@ -57,7 +57,11 @@ id,nome,inicio,fim
 3,Redes,08:00,09:50
 ```
 
-Um arquivo pronto para demonstração está disponível em [`exemplos/atividades.csv`](./exemplos/atividades.csv).
+Arquivos prontos para demonstração:
+
+- [`exemplos/atividades.csv`](./exemplos/atividades.csv): exemplo pequeno;
+- [`exemplos/baixa_sobreposicao.csv`](./exemplos/baixa_sobreposicao.csv): poucas atividades em conflito;
+- [`exemplos/alta_sobreposicao.csv`](./exemplos/alta_sobreposicao.csv): muitas atividades simultâneas.
 
 ### Complexidade
 
@@ -118,5 +122,5 @@ python src/main.py exemplos/atividades.csv
 ### Testes
 
 ```bash
-python -m unittest discover testes
+python -m unittest discover -s tests
 ```
