@@ -7,7 +7,7 @@ from pico_simultaneidade import calcular_pico_simultaneidade
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Uso: python src/main.py <arquivo_name.csv>")
+        print("Uso: python src/main.py <arquivo.csv>")
         return 1
 
     try:

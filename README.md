@@ -42,7 +42,7 @@ Para cada atividade:
 4. A atividade será adicionada à sala escolhida;
 5. O novo horário de disponibilidade será inserido na fila de prioridade.
 
-O pico de simultaneidade será calculado separadamente. Para horários iguais, eventos de término serão processados antes dos eventos de início, respeitando a convenção `[início, fim)`.
+O pico de simultaneidade é calculado separadamente. Para horários iguais, eventos de término são processados antes dos eventos de início, respeitando a convenção `[início, fim)`.
 
 ### Formato de entrada
 
@@ -75,10 +75,6 @@ Com `n` atividades, a ordenação custa `O(n log n)`. Cada atividade realiza uma
 | Calcular o pico de simultaneidade | `O(n log n)` |
 | **Complexidade final** | `O(n log n)` |
 
-## Screenshots
-
-## [Clique aqui para assistir à apresentação](#)
-
 ## Instalação
 
 ### Pré-requisitos
@@ -95,7 +91,7 @@ abaixo.
 
 ```bash
 sudo apt update
-sudo apt install python3 python3-venv python3-tk
+sudo apt install python3 python3-venv
 ```
 
 ### 2) Crie e ative o ambiente virtual
@@ -122,5 +118,5 @@ python src/main.py exemplos/atividades.csv
 ### Testes
 
 ```bash
-python -m unittest discover -s tests
+PYTHONPATH=src python -m unittest discover -s tests -v
 ```
