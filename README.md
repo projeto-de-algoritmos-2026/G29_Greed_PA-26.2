@@ -75,6 +75,30 @@ Com `n` atividades, a ordenação custa `O(n log n)`. Cada atividade realiza uma
 | Calcular o pico de simultaneidade | `O(n log n)` |
 | **Complexidade final** | `O(n log n)` |
 
+## Screenshots
+
+### Cenário de alta sobreposição
+
+Neste cenário, várias atividades acontecem simultaneamente, exigindo a criação de cinco salas. O número de salas utilizadas é igual ao pico de simultaneidade.
+
+- **Arquivo de entrada:** [alta_sobreposicao.csv](./exemplos/alta_sobreposicao.csv)
+- **Quantidade mínima de salas:** 5
+- **Pico de simultaneidade:** 5
+
+![Resultado do cenário de alta sobreposição](./assets/exemplo_alta_sobreposicao.png)
+
+### Cenário de baixa sobreposição
+
+Neste cenário, a maioria das atividades ocorre em sequência e reutiliza a mesma sala. Uma segunda sala é necessária apenas durante o período em que duas atividades se sobrepõem.
+
+- **Arquivo de entrada:** [baixa_sobreposicao.csv](./exemplos/baixa_sobreposicao.csv)
+- **Quantidade mínima de salas:** 2
+- **Pico de simultaneidade:** 2
+
+![Resultado do cenário de baixa sobreposição](./assets/exemplo_baixa_sobreposicao.png)
+
+## [Clique aqui para assistir à apresentação]()
+
 ## Instalação
 
 ### Pré-requisitos
