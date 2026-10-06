@@ -97,7 +97,7 @@ Neste cenário, a maioria das atividades ocorre em sequência e reutiliza a mesm
 
 ![Resultado do cenário de baixa sobreposição](./assets/exemplo_baixa_sobreposicao.png)
 
-## [Clique aqui para assistir à apresentação]()
+## [Clique aqui para assistir à apresentação](https://youtu.be/qZYbCokyYQY)
 
 ## Instalação
 
